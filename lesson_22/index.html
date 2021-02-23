@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 22</title>
+</head>
+
+<body>
+
+<!-- Lesson 22 JS -->
+
+<!-- Task number 1 -->
+<script>
+    let userAge = parseInt(prompt("Enter you age:"));
+    let userStatus;
+
+    const userK = "You Kid";
+    const userT = "You Teenager";
+    const userA = "You Adult";
+    const userR = "You Retiree";
+    const userX = "You're a little older baby";
+
+    if (userAge > 0 && userAge <= 2) {
+        userStatus = userK;
+    } else if (userAge >= 12 && userAge <= 18) {
+        userStatus = userT;
+    } else if (userAge > 18 && userAge <= 60) {
+        userStatus = userA;
+    } else if (userAge > 60) {
+        userStatus = userR;
+    } else {
+        userStatus = userX;
+    }
+
+    console.log(userStatus);
+</script>
+
+<!-- Task number 2 -->
+<script>
+    let userInput = parseInt(prompt("Enter a number from 0 to 9:"));
+
+     switch(userInput) {
+        case 0:
+            console.log("\u0028");
+        break;
+        case 1:
+            console.log("\u0021");
+        break;
+        case 2:
+            console.log("\u0040");
+        break;
+        case 3:
+            console.log("\u0023");
+        break;
+        case 4:
+            console.log("\u0024");
+        break;
+        case 5:
+            console.log("\u0025");
+        break;
+        case 6:
+            console.log("\u005e");
+        break;
+        case 7:
+            console.log("\u0026");
+        break;
+        case 8:
+            console.log("\u002a");
+        break;
+        case 9:
+            console.log("\u0029");
+        break;
+        default:
+            console.log("Entered character out of range!")
+    }
+</script>
+
+<!-- Task number 3 -->
+<script>
+    let userDigit = prompt("Enter a number: ");
+
+    console.log("You entered: " + userDigit);
+
+    for (let index = 0; index < userDigit.length - 1; index++) {
+        let i = index;
+       for (let position = i + 1; position < userDigit.length; position++) {
+           if (userDigit[index] == userDigit[position]) {
+               console.log("Match found: " + userDigit[index]);
+           }
+       }
+    }
+</script>
+
+<!-- Task number 4 -->
+<script>
+    let userYear = parseInt(prompt("Enter year: "));
+
+    console.log("You entered: " + userYear);
+
+    if ( userYear % 4 == 0 ||  userYear % 100 != 0 ) {
+        console.log("Introduced year high")
+    } else {
+        console.log("The introduced year is not high!")
+    }
+</script>
+
+<!-- Task number 5 -->
+<script>
+    let userPalindrome = prompt("Enter a number: ");
+
+    console.log("You entered: " + userPalindrome);
+
+    let flag=0;
+    let checkDiapazone = (userPalindrome.length - userPalindrome.length % 2) / 2;
+
+    for (let i = 0; i < checkDiapazone; i++) {
+         let j = userPalindrome.length - i - 1;
+
+        if (userPalindrome[i] != userPalindrome[j]) {
+            flag = 1;
+        }
+    }
+
+    if (flag == 1) {
+        console.log("The entered number is not a polyindrome");
+    }
+    else {
+        console.log("The entered number is a polyindrome");
+        }
+</script>
+
+<!-- Task number 6 -->
+<script>
+    let userCashe = Number(prompt("Enter the amount of USD to convert:"));
+    let userCurrency = prompt("Enter currency name EUR/UAN/AZN:");
+
+    switch(userCurrency) {
+        case "EUR":
+            userCashe = userCashe * Number(0.82);
+        break;
+        case "UAH":
+            userCashe = userCashe * Number(27.91);
+        break;
+        case "AZN":
+            userCashe = userCashe * Number(1.70);
+        break;
+    }
+
+    console.log("Currency selected: " + userCurrency);
+    console.log("Total payable, at the rate: " + userCashe + " " + userCurrency);
+</script>
+
+<!-- Task number 7 -->
+<script>
+     let userPayment = Number(prompt("Purchase amount:"));
+
+     if (userPayment > 200 && userPayment <= 300) {
+         userPayment = userPayment - userPayment * Number(0.03);
+     } else if (userPayment > 300 && userPayment <= 500) {
+        userPayment = userPayment - userPayment * Number(0.05);
+     } else if (userPayment > 500) {
+        userPayment = userPayment - userPayment * Number(0.07);
+     }
+
+     console.log("To pay: " +userPayment);
+</script>
+
+<!-- Task number 8 -->
+<script>
+    let userCircle = Number(prompt("Enter the circumference:"));
+    let userSquare = Number(prompt("Enter the perimeter:"));
+
+        const pi = Number(3.14159265);
+        let circleRadius = userCircle/(2*pi);
+        let sideSquare = userSquare / 4;
+
+        if (2*circleRadius <= sideSquare) {
+            console.log("A circle fits into a square")
+        } else {
+            console.log("The circle does not fit into the square")
+        }
+</script>
+
+<!-- Task number 9 -->
+<script>
+    console.log("Square number 15?");
+    console.log("1 - 125");
+    console.log("2 - 225");
+    console.log("3 - 345");
+
+    let rezault = 0;
+    let Q1 = Number(prompt())
+        switch(Q1) {
+            case 1:
+                rezault = rezault + 0;
+                break;
+            case 2:
+                rezault = rezault + 2;
+                break;
+            case 3:
+                rezault = rezault + 0;
+                break;
+        }
+
+    console.log("Circumference formula?");
+    console.log("1 - L=pi*R");
+    console.log("2 - L=2R^2");
+    console.log("3 - L=pi*D");
+
+    let Q2 = Number(prompt())
+        switch(Q2) {
+            case 1:
+                rezault = rezault + 0;
+                break;
+            case 2:
+                rezault = rezault + 0;
+                break;
+            case 3:
+                rezault = rezault + 2;
+                break;
+        }
+
+    console.log("Square area?");
+    console.log("1 - s^2");
+    console.log("2 - s*4");
+    console.log("3 - s*8");
+
+    let Q3 = Number(prompt())
+        switch(Q3) {
+            case 1:
+                rezault = rezault + 2;
+                break;
+            case 2:
+                rezault = rezault + 0;
+                break;
+            case 3:
+                rezault = rezault + 0;
+                break;
+        }
+
+        console.log("Your result: " + rezault);
+</script>
+
+<!-- Task number 10 -->
+<script>
+    let userDate = new Date(prompt("Enter the date /year- month-day/"));
+    let dayStep = Number(prompt("How many days to add?"));
+
+    const oneDay = 86400000;
+    let currentDate = userDate.getTime();
+
+    let yourDate = new Date(currentDate + dayStep*oneDay);
+
+    console.log(userDate);
+    console.log("Your date: " + yourDate);
+</script>
+
+</body>
+</html>

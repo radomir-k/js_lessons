@@ -134,9 +134,29 @@
 
 <!-- Task number 10 -->
 <script>
-    let num = Number(prompt("Please enter a number between 0 and 100: "));
-    
+    let a = 0;
+    let b = 100;
+    let c = b;
+    let fl;
 
+        do {
+            let set = prompt("Your number is greater '>', less '<' or equal '\=': " + c);
+
+            if (set == '>') {
+                c += (c - c % 2) / 2;
+            }
+            if (set == '<') {
+                c = (c - c % 2) / 2;
+            }
+            if (set == '=') {
+                alert("nice");
+                fl = true;
+            }
+
+        } while (fl != true);
+
+        console.log(c);
+        alert("Your number: " + c);
 
 </script>
 

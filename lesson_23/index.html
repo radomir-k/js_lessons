@@ -105,18 +105,40 @@
 
 <!-- Task number 8 -->
 <!-- <script>
+    const currentDay = new Date();
+    const oneDay = 86400000;
+    let praporets = true;
+    let step = 0;
+    let day = currentDay.getTime();
 
+    while(praporets != false) {
+        day += oneDay;
+        newDay = new Date(day);
+        step++;
+
+        praporets = confirm("Current Date: " + currentDay + "\nNumber of iterations: " + step + "\nThe sought-after day: " + newDay);
+    }
 </script> -->
 
 <!-- Task number 9 -->
 <!-- <script>
+    for (let i = 2; i <= 9; i++) {
+        for (let j = 1; j <= 10; j++) {
+            for (let n = 1; n <= 10; n++) {
+                console.log(i + "*" + j + "*" + n + "=" + i*j*n);
+            }
+        }
+    }
 
 </script> -->
 
 <!-- Task number 10 -->
-<!-- <script>
+<script>
+    let num = Number(prompt("Please enter a number between 0 and 100: "));
+    
 
-</script> -->
+
+</script>
 
 </body>
 </html>

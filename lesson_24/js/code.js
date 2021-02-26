@@ -69,7 +69,7 @@ function dateDifference(end, begin) {
     let secBegin = (parseInt(timeBegin[0]))*3600 + (parseInt(timeBegin[1]))*60 + (parseInt(timeBegin[0]));
     let second = secEnd - secBegin;
 
-    return parsTime(second);
+    return (parsTime(second));
 }
 
 // --- NOD ---

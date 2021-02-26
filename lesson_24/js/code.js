@@ -1,6 +1,6 @@
 function nCompare(a, b) {
     Number(a, b);
-    return Math.sign(a-b);
+    return Math.sign(a - b);
 }
 
 function nFactorial(a) {
@@ -16,7 +16,7 @@ function nUnite(a, b, c) {
 
 function nArea(a, b) {
     if (b == 0) { b = a; }
-    return a*b;
+    return a * b;
 }
 
 // --- This code outputs some valid values ​​and hangs ---
@@ -46,18 +46,18 @@ function setTime(hour, minute, second) {
     if (minute < 10) {minute = 0 + "" + minute;}
     if (second < 10) {second = 0 + "" + second;}
 
-    return hour +":"+ minute + ":" + second;
+    return hour + ":" + minute + ":" + second;
 }
 
 function parsSec(hour, minute, second) {
-    return hour*3600 + minute*60 + second;
+    return hour * 3600 + minute * 60 + second;
 }
 
 function parsTime(incoming) {
 
     let hour = Nod(incoming, 3600);
-    let minute = Nod((incoming - hour*3600), 60);
-    let second = (incoming - hour*3600 - minute*60);
+    let minute = Nod((incoming - hour * 3600), 60);
+    let second = (incoming - hour * 3600 - minute * 60);
 
     return setTime(hour, minute, second);
 }
@@ -65,8 +65,8 @@ function parsTime(incoming) {
 function dateDifference(end, begin) {
     let timeEnd = end.split(':');
     let timeBegin = begin.split(':');
-    let secEnd = (parseInt(timeEnd[0]))*3600 + (parseInt(timeEnd[1]))*60 + (parseInt(timeEnd[0]));
-    let secBegin = (parseInt(timeBegin[0]))*3600 + (parseInt(timeBegin[1]))*60 + (parseInt(timeBegin[0]));
+    let secEnd = (parseInt(timeEnd[0])) * 3600 + (parseInt(timeEnd[1])) * 60 + (parseInt(timeEnd[0]));
+    let secBegin = (parseInt(timeBegin[0])) * 3600 + (parseInt(timeBegin[1])) * 60 + (parseInt(timeBegin[0]));
     let second = secEnd - secBegin;
 
     return (parsTime(second));

@@ -1,8 +1,10 @@
 function nCompare(a, b) {
+    Number(a, b);
     return Math.sign(a-b);
 }
 
 function nFactorial(a) {
+    Number(a);
     let res = count = 1;
     while(count <= a) { res *= count; count++; }
     return res;
@@ -19,6 +21,7 @@ function nArea(a, b) {
 
 // --- This code outputs some valid values ​​and hangs ---
 function checkPerfect(a) {
+    Number(a);
     let flag;
     let sum = 0;
     for (let i = 1; i < a; i++) {
@@ -30,44 +33,46 @@ function checkPerfect(a) {
 }
 
 function perfectScan(a, b) {
+    Number(a, b);
     for (let i = a; i <= b; i++) {
         if (checkPerfect(i) == true) { console.log(i); }
     }
 }
 // ------------------------------------------------------
 
-function setTime(h, m, s) {
+function setTime(hour, minute, second) {
 
-    if (h < 10) {h = 0 + "" + h;}
-    if (m < 10) {m = 0 + "" + m;}
-    if (s < 10) {s = 0 + "" + s;}
+    if (hour < 10) {hour = 0 + "" + hour;}
+    if (minute < 10) {minute = 0 + "" + minute;}
+    if (second < 10) {second = 0 + "" + second;}
 
-    let t = h +":"+ m + ":" + s;
-    return t;
+    return hour +":"+ minute + ":" + second;
 }
 
-function parsSec(h, m, s) {
-    let t = h*3600 + m*60 + s;
-    return t;
+function parsSec(hour, minute, second) {
+    return hour*3600 + minute*60 + second;
 }
 
-function parsTime(s) {
+function parsTime(incoming) {
 
-    h = Nod(s, 3600);
-    m = Nod((s - h*3600), 60);
-    s = (s - h*3600 - m*60);
+    let hour = Nod(incoming, 3600);
+    let minute = Nod((incoming - hour*3600), 60);
+    let second = (incoming - hour*3600 - minute*60);
 
-    t = setTime(h, m, s);
-
-    return t;
+    return setTime(hour, minute, second);
 }
 
-function name(params) {
-    
+function dateDifference(end, begin) {
+    let timeEnd = end.split(':');
+    let timeBegin = begin.split(':');
+    let secEnd = (parseInt(timeEnd[0]))*3600 + (parseInt(timeEnd[1]))*60 + (parseInt(timeEnd[0]));
+    let secBegin = (parseInt(timeBegin[0]))*3600 + (parseInt(timeBegin[1]))*60 + (parseInt(timeBegin[0]));
+    let second = secEnd - secBegin;
+
+    return parsTime(second);
 }
 
 // --- NOD ---
 function Nod(a, b) {
-    c = (a - a % b) / b;
-    return c;
+    return (a - a % b) / b;
 }

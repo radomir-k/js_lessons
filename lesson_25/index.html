@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/myfunction.js"></script>
     <script src="/lesson_25/js/code.js"></script>
     <title>JavaScript 25</title>
 </head>
@@ -10,16 +11,30 @@
 <body>
     <!-- Test Functions (all function in code.js) -->
     <script>
-        let x = prompt("Enter 'x': ");
-        // let y = prompt("Enter 'y': ");
-        // let z = prompt("Enter 'z': ");
+        // let a = prompt("Enter 'a': ");
+        // let b = prompt("Enter 'b': ");
+        // let c = prompt("Enter 'c': ");
 
-        let n;
+        // let n;
 
         // autoInfo ();
-        autoTravelInfo(x);
+        // autoTravelInfo(x);
 
-        // console.log(n);
+        let a1 = fractionOne.numerator;
+        let b1 = fractionOne.denominator;
+        let a2 = fractionTwo.numerator;
+        let b2 = fractionTwo.denominator;
+
+        console.log(simplificationFractions(a1, b1));
+        console.log(simplificationFractions(a2, b2));
+        console.log(divisionFractions(a1, b1, a2, b2));
+        console.log(multiplicationFractions(a1, b1, a2, b2));
+        console.log(subtractionFractions(a1, b1, a2, b2));
+        console.log(additionFractions(a1, b1, a2, b2));
+
+
+
+        // console.log(a1, b1, a2, b2);
     </script>
 </body>
 </html>

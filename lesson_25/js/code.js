@@ -35,3 +35,45 @@ function autoTravelInfo(a) {
     let b = automobile.tеravelInfo(a);
     console.log("Travel time: " + b[0] + " hours."+ "\nFuel consumption: " + b[1] +" liters.");
 }
+
+
+const fractionOne = {
+    numerator: 16,
+    denominator: 32,
+}
+
+const fractionTwo = {
+    numerator: 4,
+    denominator: 12,
+}
+
+function simplificationFractions(a, b) {
+    let nod = NOD(a, b);
+    a = a / nod;
+    b = b / nod;
+    return [a, b];
+}
+
+function divisionFractions(a1, b1, a2, b2) {
+    let a = a1 * b2;
+    let b = b1 * a2;
+    return simplificationFractions(a, b);
+}
+
+function multiplicationFractions(a1, b1, a2, b2) {
+    let a = a1 * a2;
+    let b = b1 * b2;
+    return simplificationFractions(a, b);
+}
+
+function subtractionFractions(a1, b1, a2, b2) {
+    let a = a1 * b2 - a2 * b1;
+    let b = b1 * b2;
+    return simplificationFractions(a, b);
+}
+
+function additionFractions(a1, b1, a2, b2) {
+    let a = a1 * b2 + a2 * b1;
+    let b = b1 * b2;
+    return simplificationFractions(a, b);
+}

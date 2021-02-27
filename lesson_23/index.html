@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 23</title>
+</head>
+
+<body>
+
+<!-- Lesson 23 JS -->
+
+<!-- Task number 1 -->
+<script>
+    let n1 = Number(prompt("Enter the beginning of the range: "));
+    let n2 = Number(prompt("Enter end of range: "));
+
+    let sum = 0;
+
+    while(n1 <= n2){ sum+=n1; n1++; }
+
+    console.log("The sum of all numbers is: " + sum);
+</script>
+
+<!-- Task number 2 -->
+<script>
+    let a = Number(prompt("Enter the first number: "));
+    let b = Number(prompt("Enter the second number: "));
+
+    while (a != b) {
+        if (a > b) {
+            let tmp = a;
+        a = b;
+        b = tmp;
+        }
+        b = b - a;
+    }
+    console.log("NOD: " + a);
+</script>
+
+<!-- Task number 3 -->
+<script>
+    let c = Number(prompt("Enter the number: "));
+
+    for (let i=1; i<=c; i++) {
+        if (c%i==0) {
+            console.log(i);
+        }
+    }
+</script>
+
+<!-- Task number 4 -->
+<script>
+    let d = prompt("Enter the number: ");
+    let l = d.length;
+    console.log("Number length: " + l + " digits");
+</script>
+
+<!-- Task number 5 -->
+<script>
+    let ent;
+    let i = 0;
+    let positive = negative = zero = even = odd = 0;
+
+    while (i < 10) {
+        ent = Number(prompt("Enter the number: "));
+        if (ent == 0) {zero++;}
+        if (ent%2 == 0) {even++;}
+        if (ent > 0) {positive++;}
+        if (ent < 0) {negative++;}
+        if (ent%2 != 0) {odd++;}
+        i++
+    }
+    console.log("Positive: " + positive + "\nNegative: " + negative + "\nZero: " + zero + "\nEven: " + even+ "\nOdd: " + odd);
+</script>
+
+<!-- Task number 6 -->
+<script>
+    let flag = true;
+        do {
+            let userCalc = eval(prompt("Enter data for calculation /2+2-5/: "));
+            if (userCalc == null) {
+                flag = false;
+            } else {
+                console.log(userCalc);
+                flag = confirm("Your result: " + userCalc + "\nRedo calculations?");}
+        } while (flag != false);
+</script>
+
+<!-- Task number 7 -->
+<script>
+    let userNumeric = prompt("Enter you numeric: ");
+    let userStep = Number(prompt("Enter shift step: "));
+
+    for (let i = 0; i < userStep; i++) {
+        let num = userNumeric[0];
+        userNumeric = num + userNumeric.slice(1,userNumeric.length);
+    }
+
+    console.log("Shift result: " + userNumeric);
+</script>
+
+<!-- Task number 8 -->
+<script>
+    const currentDay = new Date();
+    const oneDay = 86400000;
+    let praporets = true;
+    let step = 0;
+    let day = currentDay.getTime();
+
+    while(praporets != false) {
+        day += oneDay;
+        newDay = new Date(day);
+        step++;
+
+        praporets = confirm("Current Date: " + currentDay + "\nNumber of iterations: " + step + "\nThe sought-after day: " + newDay);
+    }
+</script>
+
+<!-- Task number 9 -->
+<script>
+    for (let i = 2; i <= 9; i++) {
+        for (let j = 1; j <= 10; j++) {
+            for (let n = 1; n <= 10; n++) {
+                console.log(i + "*" + j + "*" + n + "=" + i*j*n);
+            }
+        }
+    }
+
+</script>
+
+<!-- Task number 10 -->
+<script>
+    let a = 0;
+    let b = 100;
+    let c = b;
+    let fl;
+
+        do {
+            let set = prompt("Your number is greater '>', less '<' or equal '\=': " + c);
+
+            if (set == '>') {
+                c += (c - c % 2) / 2;
+            }
+            if (set == '<') {
+                c = (c - c % 2) / 2;
+            }
+            if (set == '=') {
+                alert("nice");
+                fl = true;
+            }
+
+        } while (fl != true);
+
+        console.log(c);
+        alert("Your number: " + c);
+</script>
+
+</body>
+</html>

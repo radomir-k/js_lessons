@@ -53,15 +53,19 @@ function addProductStock() {
 
 function checkPrint () {
     let total = 0;
+    let averagePrice = 0;
     for (let i = 0; i < product.length - 1; i++) {
-        let name = product[i].name;
-        let price = product[i].price;
-        let stock = product[i].stock;
-        let units = product[i].units
-        let sum = price * stock;
-        total += sum;
-        console.log("Product: " + name + "\nPrice: " + price + " uah" + "\nAmount: " + stock + " " + units + "\nSUM: " + sum + " uah" + "\n..................");
+        if (product[i].isAvailable == true) {
+            let name = product[i].name;
+            let price = product[i].price;
+            let stock = product[i].stock;
+            let units = product[i].units
+            let sum = price * stock;
+            total += sum;
+            averagePrice = total / i;
+            console.log("Product: " + name + "\nPrice: " + price + " uah" + "\nAmount: " + stock + " " + units + "\nSUM: " + sum + " uah" + "\n..................");
+        }
     }
-
-        console.log("TOTAL: " + total + " uah");
+        console.log("TOTAL: " + total + " uah" + "\n==================");
+        console.log("Average price: " + averagePrice.toFixed (2) + " uah");
 }

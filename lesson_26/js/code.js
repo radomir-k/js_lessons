@@ -13,10 +13,10 @@ let product = [
 ]
 
 
-// product.sort(function(product) {
-//     if (product.isAvailable == true) { return -1; }
-//     if (product.isAvailable == false) { return 1; }
-// });
+product.sort(function(product) {
+    if (product.isAvailable == true) { return -1; }
+    if (product.isAvailable == false) { return 1; }
+});
 
 function inputNewProduct() {
 
@@ -42,29 +42,11 @@ function inputNewProduct() {
 function addProductStock() {
 
     addName = prompt("Enter product name: ");
+    addStock = Number(prompt("Enter new quantity: "));
 
     for (let i = 0; i < product.length - 1; i++) {
-
-        if (product[i].name != addName) {
-            
-            let f3 = confirm("Non-existent product! Add a new product?");
-            if (f3 == true) { inputNewProduct(); return; } else if (f3 == false) { return; }
-        } else
-        
-        for (let j = 0; j < product.length - 1; j++) {
-
-            if (product[j].name == addName) {
-                addStock = Number(prompt("Enter new quantity: "));
-                product[j].stock += addStock;
-            } else {
-                let f3 = confirm("Add a next product?");
-                    if (f3 == true) {
-                        addProductStock();
-                        return;
-                    } else if (f3 == false) { return; }
-            }
+        if (product[i].name == addName) {
+            product[i].stock += addStock;
         }
     }
-
-    
 }

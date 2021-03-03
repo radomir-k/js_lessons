@@ -21,7 +21,7 @@ const automobile = {
     tankCapacity: 58,
 
     tеravelInfo: function(way) {
-        let travelTime = (way / this.averageSpeed) + Math.round(way / (this.averageSpeed * 4));
+        let travelTime = (way / this.averageSpeed) + Math.trunc((way / this.averageSpeed) / 5);
         let tFuel = (way / 100) * 7;
         return [travelTime, tFuel];
     }
@@ -76,4 +76,11 @@ function additionFractions(a1, b1, a2, b2) {
     let a = a1 * b2 + a2 * b1;
     let b = b1 * b2;
     return simplificationFractions(a, b);
+}
+
+
+const hollowTime = {
+    hours: ,
+    minutes: ,
+    seconds: ,
 }

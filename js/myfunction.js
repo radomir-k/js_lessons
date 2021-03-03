@@ -9,3 +9,8 @@ function NOD(a, b) {
     }
     return a;
 }
+function saveFile() {
+    
+    let saveData = new Blob(product, {type: "text/plain;charset=utf-8"});
+    saveAs(saveData, "/product.csv");
+}

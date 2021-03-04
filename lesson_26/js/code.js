@@ -82,6 +82,110 @@ function checkPrint () {
         console.log("Maximum purchase price: " + maxSum + " uah" + "\n" + separator2);
 }
 
+// --- Task 3 ---
+let themeColors = [
+    {themeName: green,
+        primaryDark: { background: 'hsl(120, 90%, 30%)' },
+        primaryDefault: { background: 'hsl(120, 90%, 55%)' },
+        primaryLight: { background: 'hsl(120, 90%, 80%)' },
+        primaryLightText: { color: 'hsl(120, 100%, 100%)' },
+        primaryDarkText: { color: 'hsl(120, 0%, 15%)' },
+        secondaryText: { color: 'hsl(120, 0%, 50%)' },
+    },
+
+    {themeName: blue,
+        primaryDark: { background: 'hsl(210, 90%, 30%)' },
+        primaryDefault: { background: 'hsl(210, 90%, 55%)' },
+        primaryLight: { background: 'hsl(210, 90%, 80%)' },
+        primaryLightText: { color: 'hsl(210, 100%, 100%)' },
+        primaryDarkText: { color: 'hsl(210, 0%, 15%)' },
+        secondaryText: { color: 'hsl(210, 0%, 50%)' },
+    },
+
+    {themeName: orange,
+        primaryDark: { background: 'hsl(30, 90%, 30%)' },
+        primaryDefault: { background: 'hsl(30, 90%, 55%)' },
+        primaryLight: { background: 'hsl(30, 90%, 80%)' },
+        primaryLightText: { color: 'hsl(30, 100%, 100%)' },
+        primaryDarkText: { color: 'hsl(30, 0%, 15%)' },
+        secondaryText: { color: 'hsl(30, 0%, 50%)' },
+    },
+
+    {themeName: yeloow,
+        primaryDark: { background: 'hsl(55, 90%, 30%)' },
+        primaryDefault: { background: 'hsl(55, 90%, 55%)' },
+        primaryLight: { background: 'hsl(55, 90%, 80%)' },
+        primaryLightText: { color: 'hsl(55, 100%, 100%)' },
+        primaryDarkText: { color: 'hsl(55, 0%, 15%)' },
+        secondaryText: { color: 'hsl(55, 0%, 50%)' },
+    },
+]
+
+let themeFonts = [
+    {tag: h1,
+        'font-amily': 'Georgia',
+        'font-size': 3.4,
+        'font-weight': 700,
+        'lineH-height': 1,
+        'letter-spacing': 0.5,
+        'text-transform': uppercase,
+        'text-align': center,
+    },
+
+    {tag: h2,
+        'font-amily': 'Georgia',
+        'font-size': 2,
+        'font-weight': 700,
+        'lineH-height': 1,
+        'letter-spacing': 0.3,
+        'text-transform': uppercase,
+        'text-align': center,
+    },
+
+    {tag: h3,
+        'font-amily': 'Georgia',
+        'font-size': 1.2,
+        'font-weight': 700,
+        'lineH-height': 1,
+        'letter-spacing': 0.3,
+        'text-transform': normal,
+        'text-align': center,
+    },
+
+    {tag: h4,
+        'font-amily': 'Georgia',
+        'font-size': 1.2,
+        'font-weight': 500,
+        'lineH-height': 1,
+        'letter-spacing': 0.3,
+        'text-transform': normal,
+        'text-align': left,
+    },
+
+    {tag: p,
+        'font-amily': 'Georgia',
+        'font-size': 1.2,
+        'font-weight': 300,
+        'lineH-height': normal,
+        'letter-spacing': 0.5,
+        'text-transform': normal,
+        'text-align': justify,
+    },
+
+    {tag: a,
+        'font-amily': 'Georgia',
+        'font-size': 1.2,
+        'font-weight': 300,
+        'lineH-height': normal,
+        'letter-spacing': 0.3,
+        'text-transform': normal,
+        'text-align': center,
+    },
+
+]
+
+
+
 
 // --- Task 4 ---
 let academy = [

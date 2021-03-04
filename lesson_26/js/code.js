@@ -126,12 +126,7 @@ function sortBySeating(arr){
     console.log(arr);
 }
 
-function studentCondition(a, b){
-    if (a = academy.facultet && b > Number(academy.seating)) { return true; }
-    else return false;
-}
-
-function audienceSelection (a, b) {
-    let filtered = academy.filter(studentCondition == true);
+function studentCondition(arr, a, b) {
+    let filtered = arr.filter(arr => arr.facultet == a && arr.seating >= b);
     console.log(filtered);
 }

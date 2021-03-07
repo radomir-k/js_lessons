@@ -51,16 +51,23 @@ let playList = [
     }
 ];
 
+
 let boxSongs = document.createElement('div');
+
     boxSongs.className = 'box-songs';
     document.body.appendChild(boxSongs);
 
+
 let headerSongs = document.createElement('div');
+
     headerSongs.className = 'header-songs';
     headerSongs.innerHTML = 'PLAY LIST';
+
     boxSongs.append(headerSongs);
 
+
 let songUl = document.createElement('ul');
+
     songUl.className = 'list-songs';
     boxSongs.append(songUl);
 
@@ -70,6 +77,7 @@ let songUl = document.createElement('ul');
         let currentSong = playList[index].song;
         let num = index + 1;
         let songLi = document.createElement('li');
+
         songLi.className = 'item-songs'
         songLi.innerHTML = `${num}: ${currentAuthor} - ${currentSong}`;
         songUl.append(songLi);
@@ -102,36 +110,51 @@ let semafore = [
     },
 ]
 
+
 let boxSemafor = document.createElement('div');
+
     boxSemafor.className = 'box-semafor';
     document.body.appendChild(boxSemafor);
 
+
     for (let index = 0; index < 3; ++index) {
+
         let currentSection = document.createElement('div');
         let sectionName = semafore[index].name;
+
         currentSection.id = `${sectionName}`;
         currentSection.className = 'section';
         boxSemafor.appendChild(currentSection);
     }
 
+
 let btnState = document.createElement('button');
+
     btnState.className = 'btn-semafor';
     btnState.innerHTML = 'Change State';
+
     boxSemafor.after(btnState);
+
 
 function resetColor() {
     for (let index = 0; index < 3; ++index) {
+
         document.getElementById(`${semafore[index].name}`).style.backgroundColor = `${semafore[3].foneColor}`;
         document.getElementById(`${semafore[index].name}`).style.borderColor = `${semafore[3].strokeColor}`;
     }
 }
 
+
 let i = 0;
-    btnState.onclick = function() {
-        resetColor();
-        document.getElementById(`${semafore[i].name}`).style.backgroundColor = `${semafore[i].foneColor}`;
-        document.getElementById(`${semafore[i].name}`).style.borderColor = `${semafore[i].strokeColor}`;
-        i++;
-        if (i > 2) { i = 0};
-    }
+
+btnState.onclick = function() {
+
+    resetColor();
+    document.getElementById(`${semafore[i].name}`).style.backgroundColor = `${semafore[i].foneColor}`;
+    document.getElementById(`${semafore[i].name}`).style.borderColor = `${semafore[i].strokeColor}`;
+
+    i++;
+
+    if (i > 2) { i = 0};
+}
 

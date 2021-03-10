@@ -9,28 +9,48 @@ let leftButon = document.querySelector(".btn-al-left");
 let centerButon = document.querySelector(".btn-al-center");
 let rightButon = document.querySelector(".btn-al-right");
 
-// document.execCommand('bold', false, null);
-// document.execCommand('italic', false, null);
-// document.execCommand('underline', false, null);
+boldButon.onclick = function() {
+    document.execCommand('bold', false, null);
+}
 
-// document.execCommand('justifyLeft', false, null);
-// document.execCommand('justifyCenter', false, null);
-// document.execCommand('justifyRight', false, null);
-// document.execCommand('justifyFull', false, null);
+italicButon.onclick = function() {
+    document.execCommand('italic', false, null);
+}
 
-// document.execCommand('removeFormat', false, null);
+underlinedButon.onclick = function() {
+    document.execCommand('underline', false, null);
+}
+
+leftButon.onclick = function() {
+    document.execCommand('justifyLeft', false, null);
+}
+
+centerButon.onclick = function() {
+    document.execCommand('justifyCenter', false, null);
+}
+
+rightButon.onclick = function() {
+    document.execCommand('justifyRight', false, null);
+}
+
+justifyButon.onclick = function() {
+    document.execCommand('justifyFull', false, null);
+}
+
+clearButon.onclick = function() {
+    document.execCommand('removeFormat', false, null);
+}
 
 // On/Off edit mode
 let flag = false;
 document.querySelector(".editText").contentEditable = flag;
 document.querySelector("._mode").hidden = !flag;
 
-editButon.onclick = function(event) {
+editButon.onclick = function() {
     flag = !flag;
     document.querySelector(".editText").contentEditable = flag;
     document.querySelector("._mode").hidden = !flag;
 }
-
 
 
 let resizeBlock = document.querySelector(".resizeContainer");

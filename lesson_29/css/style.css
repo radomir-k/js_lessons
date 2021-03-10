@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+ol, ul { list-style: none; }
+
+.root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.resizeContainer {
+  position: absolute;
+  max-width: 90%;
+  max-height: 90%;
+  border-left: .12em;
+  border-right: .12em;
+  border-bottom: .12em;
+  border-style: solid;
+  border-color:  lightslategrey;
+  border-radius: .4em;
+}
+
+._handle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: lightslategrey;
+  user-select: none;
+  cursor: se-resize;
+}
+
+._mode {
+  position: absolute;
+  right: 2em;
+  bottom: .5em;
+  width: fit-content;
+  height: fit-content;
+  padding: .2em .4em .2em .4em;
+  font-size: small;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgb(235, 86, 116);
+  border-radius: .4em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  border-top: .12em;
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+  border-style: solid;
+  border-color: lightslategrey;
+  padding: .4em;
+  background-color: lightslategrey;
+  justify-content: space-between;
+}
+
+.menu-item {
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  padding: .3em;
+  border: .15em;
+  border-style: solid;
+  border-color: darkkhaki;
+  border-radius: .3em;
+  color: darkkhaki;
+  user-select: none;
+}
+
+.editText {
+  width: 95%;
+  height: 95%;
+  padding: 1.5em;
+  text-align: justify;
+  user-select: none;
+}
+
+
+.menu-item:hover {
+  color: rgb(235, 224, 70);
+  border-color: rgb(235, 224, 70);
+}
+
+.menu-item:active {
+  background-color:  hsl(210, 14%, 45%);
+}
+
+
+
+
+
+
+

@@ -137,6 +137,7 @@ let btnState = document.createElement('button');
 
 
 function resetColor() {
+
     for (let index = 0; index < 3; ++index) {
 
         document.getElementById(`${semafore[index].name}`).style.backgroundColor = `${semafore[3].foneColor}`;

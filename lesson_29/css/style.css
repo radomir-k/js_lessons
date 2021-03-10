@@ -20,7 +20,7 @@ ol, ul { list-style: none; }
 }
 
 .resizeContainer {
-  position: absolute;
+  position: relative;
   max-width: 90%;
   max-height: 90%;
   border-left: .12em;
@@ -84,6 +84,7 @@ ol, ul { list-style: none; }
 }
 
 .editText {
+  display: b;
   width: 95%;
   height: 95%;
   padding: 1.5em;

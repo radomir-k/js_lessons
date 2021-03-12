@@ -5,12 +5,113 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="/js/myfunction.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/lesson_30/css/30_1.css">
         <title>JavaScript 28</title>
     </head>
 
     <body>
         <div id = "root" class = "root">
+            <div class="container -color-0">
+                <div class="calc-grid">
+
+                    <input class="btn -three -color-1"
+                        type = "button"
+                        value = "3"
+                        onclick="calcInsrtuction(3)">
+
+                    <input class="btn -two -color-1"
+                        type = "button"
+                        value = "2"
+                        onclick="calcInsrtuction(2)">
+
+                    <input class="btn -one -color-1"
+                        type = "button"
+                        value = "1"
+                        onclick="calcInsrtuction(1)">
+
+                    <input class="btn -zero -color-1"
+                        type = "button"
+                        value = "0"
+                        onclick = "calcInsrtuction(0)">
+
+                    <input class="btn -four -color-1"
+                        type = "button"
+                        value = "4"
+                        onclick = "calcInsrtuction(4)">
+
+                    <input class="btn -five -color-1"
+                        type = "button"
+                        value = "5"
+                        onclick = "calcInsrtuction(5)">
+
+                    <input class="btn -six -color-1"
+                        type = "button"
+                        value = "6"
+                        onclick = "calcInsrtuction(6)">
+
+                    <input class="btn -seven -color-1"
+                        type = "button"
+                        value = "7"
+                        onclick = "calcInsrtuction(7)">
+
+                    <input class="btn -eight -color-1"
+                        type = "button"
+                        value = "8"
+                        onclick = "calcInsrtuction(8)">
+
+                    <input class="btn -nine -color-1"
+                        type = "button"
+                        value = "9"
+                        onclick = "calcInsrtuction(9)">
+
+                    <input class="btn -reset -color-2"
+                        type = "button"
+                        value = "C"
+                        onclick = "calcClear()">
+
+                    <input class="btn -delete -color-3"
+                        type = "button"
+                        value = "&#8676;"
+                        onclick = "calcDelete()">
+
+                    <input class="btn -divide -color-3"
+                        type = "button"
+                        value = "&#247;"
+                        onclick = "calcInsrtuction('/')">
+
+                    <input class="btn -multiply -color-3"
+                        type = "button"
+                        value = "&#215;"
+                        onclick = "calcInsrtuction('*')">
+
+                    <input class="btn -subtract -color-3"
+                        type="button"
+                        value = "&#8722;"
+                        onclick = "calcInsrtuction('-')">
+
+                    <input class="btn -add -color-3"
+                        type = "button"
+                        value = "&#43;"
+                        onclick = "calcInsrtuction('+')">
+
+                    <input class="btn -dot -color-1"
+                        type = "button"
+                        value = "&period;"
+                        onclick = "calcInsrtuction('.')">
+
+                    <input class="btn -equally -color-4"
+                        type = "button"
+                        value = "&#61;"
+                        onclick = "calcEqually()">
+
+                    <input class="-display -color-5"
+                        type = "text" >
+                    </input>
+
+                </div>
+            </div>
+
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="/lesson_30/js/30_1.js"></script>

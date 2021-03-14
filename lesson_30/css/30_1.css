@@ -80,6 +80,7 @@ ol, ul { list-style: none; }
   color: hsl(210, 100%, 100%);
   align-items: center;
   justify-content: center;
+  user-select: none;
 }
 
 .btn:hover {

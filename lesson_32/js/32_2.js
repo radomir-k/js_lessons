@@ -26,12 +26,12 @@ new SlimSelect({
   select: '.--category'
 })
 
-fetch(connectionSting) // GET
+fetch(testURL) // GET
                 .then((response) => response.json())
                 .then((fullRequest) => {
                   $('.image-gallery').html(`
-                    <a href = ${hits.previewURL}>
-                      <img alt = ${hits.id} src = ${hits.previewURL}/>
+                    <a href = ${fullRequest.hits.previewURL}>
+                      <img alt = ${fullRequest.hits.id} src = ${fullRequest.hits.previewURL}/>
                     </a>
                   `);
                 })

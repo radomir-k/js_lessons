@@ -98,25 +98,27 @@ header {
 .owl-prev span {
   font-size: 2rem;
   padding: 0px 22px 5px 18px;
-  color: hsla(25, 0%, 100%, .9);
-  border: 3px solid hsla(25, 0%, 100%, .9);
+  color: hsla(25, 100%, 50%, .8);
+  border: 3px solid hsla(25, 100%, 50%, .8);
   border-radius: 50%;
-  background-color: hsla(25, 0%, 100%, .7);
+  background-color: hsla(25, 0%, 100%, .5);
   position: absolute;
   top: 38%;
   left: 20px;
+  box-shadow: 0px 0px 4px 2px rgb(30, 30, 30, .4);
 }
 
 .owl-next span {
   font-size: 2rem;
   padding: 0px 18px 5px 22px;
-  color: hsla(25, 0%, 100%, .9);
-  border: 3px solid hsla(25, 0%, 100%, .9);
+  color: hsla(25, 100%, 50%, .8);
+  border: 3px solid hsla(25, 100%, 50%, .8);
   border-radius: 50%;
-  background-color: hsla(25, 0%, 100%, .7);
+  background-color: hsla(25, 0%, 100%, .5);
   position: absolute;
   top: 38%;
   right: 20px;
+  box-shadow: 0px 0px 4px 2px rgb(30, 30, 30, .4);
 }
 
 

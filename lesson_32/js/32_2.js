@@ -71,7 +71,3 @@ fetch(connectionSting) // GET
   .catch((error) => {
   console.log(error);
   });
-
-  //  new SlimSelect({
-  //   select: '.--category'
-  // })

@@ -3,12 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@200;300;400;600;700;800&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
         <link rel="stylesheet" href="/lesson_32/css/slimselect.css">
+        <link rel="stylesheet" href="/lesson_32/css/justifiedGallery.css" />
         <link rel="stylesheet" type="text/css" href="/lesson_32/css/controls.css">
         <link rel="stylesheet" type="text/css" href="/lesson_32/css/32_2.css">
+
         <title>JavaScript 32</title>
     </head>
 
@@ -23,15 +27,15 @@
 
                     <div class = "search-panel">
                         <input class = "gl-search" type = "text" placeholder = "Search..">
-                        <button class = "-button search material-icons-outlined iconGrey">search</button>
-                        <button class = "-button ext ext-status material-icons-outlined iconGrey">filter_alt</button>
+                        <button class = "-button search material-icons iconGrey">search</button>
+                        <button class = "-button ext ext-status material-icons iconGrey">filter_alt</button>
                     </div>
 
                     <div>
-                        
+
                     </div>
                 </div>
-                <!-- <div class="powered-by">
+                <div class="powered-by">
                     <p>powered&nbsp;by&nbsp;&nbsp;</p>
                     <svg id="_x31_"
                          xmlns="http://www.w3.org/2000/svg"
@@ -64,13 +68,13 @@
                                   c0-0.5,0.2-0.8,0.5-1.1c0.3-0.3,0.7-0.5,1.1-0.5c0.5,0,0.8,0.2,1.1,0.5s0.5,0.7,0.5,1.1C8.8,36.8,8.7,37.1,8.4,37.4z M10.6,38.9h1
                                   v-5.3h-1V38.9z M17.7,33.6h-1.4L15,35.3l-1.1-1.6h-1.4l1.9,2.6l-2,2.7h1.5l1.2-1.7l1.4,1.7h1.5l-2.2-2.7L17.7,33.6z"/>
                     </svg>
-                </div> -->
+                </div>
             </nav>
 
             <div class = "ext-panel ext-status">
                 <div class = "ext-panel--container">
                     <hr>
-                    <div class = "-list">
+                    <div class = "data-list">
                         <span class = "list-header">Type of Image to Search</span>
                         <select id = "typeSelector" class = "select-group typeSelector" multiple>
                             <option class = "list-item img-type" value="photo">Photo</option>
@@ -80,7 +84,7 @@
                         <span class = "list-futer">*by default looked for in all categories...</span>
                     </div>
                     <hr>
-                    <div class = "-list">
+                    <div class = "data-list">
                         <span class = "list-header">Category of Image to Search</span>
                         <select id = "categorySelector" class = "select-group categorySelector" multiple>
                             <option class = "list-item img-type" value="backgrounds">backgrounds</option>
@@ -105,15 +109,77 @@
                             <option class = "list-item img-type" value="music">music</option>
                         </select>
                         <span class = "list-futer">*by default looked for in all categories...</span>
-
                     </div>
                     <hr>
+                    <div class = "color-picker">
+                        <div class = "chkbox">
+                            <input id = "grayscale" class = "colorcheck" type = "checkbox" value = "grayscale">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "grayscale"><span class = "grayscale">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "red" class = "colorcheck" type = "checkbox" value="red">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "red"><span class = "red">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "orange" class = "colorcheck" type = "checkbox" value = "orange">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "orange"><span class = "orange">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "yellow" class = "colorcheck" type = "checkbox" value = "yellow">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "yellow"><span class = "yellow">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "green" class = "colorcheck" type = "checkbox" value = "green">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "green"><span class = "green">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "blue" class = "colorcheck" type = "checkbox" value = "blue">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "blue"><span class = "blue">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "lilac" class = "colorcheck" type = "checkbox" value = "lilac">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "lilac"><span class = "lilac">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "pink" class = "colorcheck" type = "checkbox" value = "pink">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "pink"><span class = "pink">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "brown" class = "colorcheck" type = "checkbox" value = "brown">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "brown"><span class = "brown">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "white" class = "colorcheck" type = "checkbox" value = "white">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "white"><span class = "white">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "gray" class = "colorcheck" type = "checkbox" value = "gray">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "gray"><span class = "gray">circle</span></label>
+                        </div>
+                        <div class = "chkbox">
+                            <input id = "black" class = "colorcheck" type = "checkbox" value="black">
+                            <span class = "check"></span>
+                            <label class = "material-icons" for = "black"><span class = "black">circle</span></label>
+                        </div>
+                   </div>
                 </div>
             </div>
-
             <main class = "main-container">
-                <div id="mygallery" class = "image-gallery" >
-                    <!-- Here will be the source of the gallery -->
+                <div class = "gallery-container">
+                    <div id="gallery" class = "gallery" >
+                        <!-- Here will be the source of the gallery -->
+                    </div>
                 </div>
             </main>
 
@@ -124,6 +190,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="/lesson_32/js/slimselect.js"></script>
+        <script src="/lesson_32/js/jquery.justifiedGallery.js"></script>
         <script src="/lesson_32/js/32_2.js"></script>
     </body>
 </html>

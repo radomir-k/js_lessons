@@ -86,6 +86,9 @@ function setTimeStamp {
   localStorage.setItem(`timeStamp${stamp}`, queryStamp);
 }
 
+function getTimeStamp(stamp) {
+  queryStr = localStorage.getItem(`timeStamp${stamp}`);
+}
 
 //   $('#gallery').justifiedGallery({
 //     rowHeight: 150,

@@ -1,0 +1,84 @@
+
+.box-songs {
+  width: 30%;
+  margin: 3%;
+  height: fit-content;
+  justify-content: center;
+  border: 1px solid hsl(120, 22%, 75%);
+  border-radius: 10px;
+  background-color: hsl(120, 35%, 75%);
+}
+
+.header-songs {
+  padding: 8px;
+  border: 1px solid hsl(120, 35%, 35%);
+  border-radius: 7px;
+  color: hsl(120, 35%, 100%);
+  background-color: hsl(120, 35%, 35%);
+  text-align: center;
+}
+
+.item-songs {
+  width: 100%;
+  text-align: left;
+  padding: 8px;
+  font-size: 1.2rem;
+  border: 1px solid hsl(120, 35%, 35%);
+  border-radius: 7px;
+  color: hsl(120, 35%, 35%);
+  background-color: hsl(120, 35%, 75%);
+  list-style-type: none;
+}
+
+.item-songs:hover {
+  color: hsl(120, 35%, 100%);
+  background-color: hsl(120, 35%, 35%);
+}
+
+
+.box-semafor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 160px;
+  height: 500px;
+  margin: 3%;
+  align-items: center;
+  justify-content: space-around;
+  background-color: hsl(0, 0%, 90%);
+  border: 5px solid hsl(0, 0%, 70%);
+  border-radius: 40px;
+}
+
+.section {
+  width: 140px;
+  height: 140px;
+  border: 5px solid hsl(0, 0%, 70%);
+  background-color: hsl(0, 0%, 80%);
+  border-radius: 70px;
+}
+
+.btn-semafor {
+  width: 150px;
+  height: 40px;
+  margin: 5px;
+  text-align: center;
+  font-size: medium;
+  font-weight: 700;
+  color: hsl(0, 0%, 60%);
+  background-color: hsl(0, 0%, 90%);
+  border: 3px solid hsl(0, 0%, 70%);
+  border-radius: 20px;
+}
+
+.btn-semafor:hover {
+  color: hsl(0, 0%, 90%);
+  background-color: hsl(150, 100%, 40%);
+  border: 3px solid hsl(150, 100%, 30%);
+  border-radius: 20px;
+}
+
+.btn-semafor:active {
+  box-shadow: 0px 0px 4px 1px rgb(30, 30, 30, .3) inset;
+}
+

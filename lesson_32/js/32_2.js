@@ -13,7 +13,10 @@ $('.-button.search').click(function(){
 
   getPicture(queryStr);
 
-  setTimeStamp();
+  let queryStamp = `query:${ searchStr}, type:${typeStr}, categor:${categoryStr}, color:${colorStr}`;
+
+  stamp = stamp + 1;
+  setTimeStamp(queryStamp);
 
 });
 
@@ -80,10 +83,8 @@ function getPicture(fullRequest) {
 }
 
 
-function setTimeStamp {
-  stamp += stamp;
-  let queryStamp = JSON.parse(queryStr);
-  localStorage.setItem(`timeStamp${stamp}`, queryStamp);
+function setTimeStamp(data) {
+  localStorage.setItem(`timeStamp${stamp}`, data);
 }
 
 function getTimeStamp(stamp) {
